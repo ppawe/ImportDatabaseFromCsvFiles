@@ -1,14 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7543e354-8335-4272-8c23-e5d8f62ef9e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1UWBvBwVpRCeKUrD6mMnFVuaCh4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.deploy.options" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7543e354-8335-4272-8c23-e5d8f62ef9e6" name="Default Changelist" comment="" />
+      <created>1575462698444</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575462698444</updated>
+      <workItem from="1575462701091" duration="8718000" />
+      <workItem from="1575526888701" duration="6168000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="657" y="146" width="596" height="821" key="#PHP" timestamp="1575463381659">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="657" y="146" width="596" height="821" key="#PHP/0.30.1920.1050/1920.0.1920.1080@0.30.1920.1050" timestamp="1575463381659" />
+    <state x="780" y="481" width="349" height="151" key="NewPhpFileDialog" timestamp="1575463709859">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="780" y="481" width="349" height="151" key="NewPhpFileDialog/0.30.1920.1050/1920.0.1920.1080@0.30.1920.1050" timestamp="1575463709859" />
+    <state x="464" y="190" width="992" height="733" key="SettingsEditor" timestamp="1575463517172">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="464" y="190" width="992" height="733" key="SettingsEditor/0.30.1920.1050/1920.0.1920.1080@0.30.1920.1050" timestamp="1575463517172" />
     <state x="653" y="382" key="com.intellij.ide.util.TipDialog" timestamp="1575462702976">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="653" y="382" key="com.intellij.ide.util.TipDialog/0.30.1920.1050/1920.0.1920.1080@0.30.1920.1050" timestamp="1575462702976" />
+    <state x="862" y="290" width="329" height="536" key="ftp.server.browser" timestamp="1575463506185">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="862" y="290" width="329" height="536" key="ftp.server.browser/0.30.1920.1050/1920.0.1920.1080@0.30.1920.1050" timestamp="1575463506185" />
   </component>
 </project>
