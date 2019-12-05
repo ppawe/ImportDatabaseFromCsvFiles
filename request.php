@@ -5,9 +5,15 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "Connected to export database successfully\n\n";
+echo "Connected to export database successfully<br>";
 
-$tables = $conn->query("SELECT table_name FROM information_schema.tables WHERE table_schema = '" . $_POST["DbNameExport"] . "'")->fetch_all();
+$tables = ["ps_customer","ps_customer_group","ps_customer_message","ps_customer_thread","ps_product","ps_product_attribute","ps_product_attribute_combination","ps_product_attribute_shop","ps_product_lang","ps_product_shop","ps_category","ps_category_group","ps_category_lang","ps_category_product","ps_category_shop","ps_orders","ps_order_carrier","ps_order_cart_rule","ps_order_detail","ps_order_detail_tax","ps_order_history","ps_order_invoice","ps_order_invoice_payment","ps_order_invoice_tax","ps_order_message","ps_order_message_lang","ps_order_payment","ps_or","er_return_state","ps_order_return_state_lang","ps_order_slip","ps_order_state","ps_order_state_lang","ps_guest","ps_delivery","ps_employee","ps_employee_shop","ps_group","ps_group_lang","ps_group_shop","ps_info","ps_info_lang","ps_lang","ps_lang_shop","ps_pack","ps_search_index","ps_search_word","ps_sekeyword","ps_specific_price","ps_specific_price_priority","ps_specific_price_rule","ps_state","ps_tax","ps_tax_lang","ps_tax_rule","ps_tax_rules_group","ps_tax_rules_group_shop","ps_zone"];
+if (isset($_POST["logs"])) {
+    array_push($tables, "ps_log");
+}
+if (isset($_POST["messages"])) {
+    array_push($tables, "ps_message");
+}
 
 $oldMask = umask(0);
 if (!is_dir($_POST["folder_path"])) {
@@ -15,15 +21,18 @@ if (!is_dir($_POST["folder_path"])) {
 }
 umask($oldMask);
 
-foreach ($tables as $table) {
-    $conn->query("SELECT * FROM " . $table[0] . " INTO OUTFILE '" . $_POST["folder_path"] . "/" . $table[0] . ".csv' FIELDS ENCLOSED BY ',' TERMINATED BY ';' ESCAPED BY '\"' LINES TERMINATED BY '\\r\\n'");
+echo "Exportiere alte Daten...<br>";
 
-    echo "\n\n";
+foreach ($tables as $table) {
+    $conn->query("SELECT * FROM " . $table . " INTO OUTFILE '" . $_POST["folder_path"] . "/" . $table . ".csv' FIELDS ENCLOSED BY ',' TERMINATED BY ';' ESCAPED BY '\"' LINES TERMINATED BY '\\r\\n'");
 }
+
+echo "Export finished.<br>";
 
 $conn = new mysqli($_POST["mysqlHostName"], $_POST["mysqlUserName"], $_POST["mysqlPassword"], $_POST["DbNameImport"]);
 
 if ($conn->connect_error) {
+    echo "Dying!";
     die("Connection failed: " . $conn->connect_error);
 }
 
@@ -42,8 +51,10 @@ foreach ($files as $file) {
         if (!$success) {
             echo $conn->error . "<br>";
         }
+        unlink($file);
     } else {
         echo "Path not found!<br>";
     }
 }
+rmdir($_POST["folder_path"]);
 echo "Done!";

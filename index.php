@@ -11,5 +11,7 @@
     <input type="text" name="DbNameImport" value="TestDB"><br>
     Pfad für Ausgabeordner:<br>
     <input type="text" name="folder_path" value="/var/www/ImportDatabaseFromCsvFiles/csv"><br>
+    <input type="checkbox" name="logs"> Log-Dateien kopieren<br>
+    <input type="checkbox" name="messages"> Nachrichten kopieren<br>
     <input type="submit"<br>
 </form>
